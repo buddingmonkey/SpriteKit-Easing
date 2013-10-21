@@ -17,7 +17,7 @@
 		D9CFF8E818149E2C00707D5B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D9CFF8E618149E2C00707D5B /* InfoPlist.strings */; };
 		D9CFF8EA18149E2C00707D5B /* SpriteKit_EasingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CFF8E918149E2C00707D5B /* SpriteKit_EasingTests.m */; };
 		D9CFF8F418149E9600707D5B /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9CFF8F318149E9600707D5B /* SpriteKit.framework */; };
-		D9CFF8F718149ED000707D5B /* SKEEases.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CFF8F618149ED000707D5B /* SKEEases.m */; };
+		D9CFF8FA1814A5AC00707D5B /* easing.c in Sources */ = {isa = PBXBuildFile; fileRef = D9CFF8F81814A5AC00707D5B /* easing.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,8 +56,9 @@
 		D9CFF8E718149E2C00707D5B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D9CFF8E918149E2C00707D5B /* SpriteKit_EasingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpriteKit_EasingTests.m; sourceTree = "<group>"; };
 		D9CFF8F318149E9600707D5B /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
-		D9CFF8F518149ED000707D5B /* SKEEases.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKEEases.h; sourceTree = "<group>"; };
-		D9CFF8F618149ED000707D5B /* SKEEases.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKEEases.m; sourceTree = "<group>"; };
+		D9CFF8F81814A5AC00707D5B /* easing.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = easing.c; sourceTree = "<group>"; };
+		D9CFF8F91814A5AC00707D5B /* easing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = easing.h; sourceTree = "<group>"; };
+		D9CFF8FB1814A88600707D5B /* EasingDeclarations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasingDeclarations.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,11 +118,12 @@
 		D9CFF8CF18149E2B00707D5B /* SpriteKit-Easing */ = {
 			isa = PBXGroup;
 			children = (
+				D9CFF8FB1814A88600707D5B /* EasingDeclarations.h */,
+				D9CFF8F81814A5AC00707D5B /* easing.c */,
+				D9CFF8F91814A5AC00707D5B /* easing.h */,
 				D9CFF8D218149E2B00707D5B /* SpriteKit_Easing.h */,
 				D9CFF8D418149E2B00707D5B /* SpriteKit_Easing.m */,
 				D9CFF8D018149E2B00707D5B /* Supporting Files */,
-				D9CFF8F518149ED000707D5B /* SKEEases.h */,
-				D9CFF8F618149ED000707D5B /* SKEEases.m */,
 			);
 			path = "SpriteKit-Easing";
 			sourceTree = "<group>";
@@ -233,8 +235,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9CFF8FA1814A5AC00707D5B /* easing.c in Sources */,
 				D9CFF8D518149E2B00707D5B /* SpriteKit_Easing.m in Sources */,
-				D9CFF8F718149ED000707D5B /* SKEEases.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
