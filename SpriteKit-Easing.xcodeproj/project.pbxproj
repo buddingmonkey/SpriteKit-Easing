@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D9CFF8CE18149E2B00707D5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9CFF8CD18149E2B00707D5B /* Foundation.framework */; };
-		D9CFF8D318149E2B00707D5B /* SpriteKit_Easing.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D9CFF8D218149E2B00707D5B /* SpriteKit_Easing.h */; };
-		D9CFF8D518149E2B00707D5B /* SpriteKit_Easing.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CFF8D418149E2B00707D5B /* SpriteKit_Easing.m */; };
+		D9CFF8D318149E2B00707D5B /* SKEase.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D9CFF8D218149E2B00707D5B /* SKEase.h */; };
+		D9CFF8D518149E2B00707D5B /* SKEase.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CFF8D418149E2B00707D5B /* SKEase.m */; };
 		D9CFF8DC18149E2C00707D5B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9CFF8DB18149E2C00707D5B /* XCTest.framework */; };
 		D9CFF8DD18149E2C00707D5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9CFF8CD18149E2B00707D5B /* Foundation.framework */; };
 		D9CFF8DF18149E2C00707D5B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9CFF8DE18149E2C00707D5B /* UIKit.framework */; };
@@ -37,7 +37,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				D9CFF8D318149E2B00707D5B /* SpriteKit_Easing.h in CopyFiles */,
+				D9CFF8D318149E2B00707D5B /* SKEase.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,8 +47,8 @@
 		D9CFF8CA18149E2B00707D5B /* libSpriteKit-Easing.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libSpriteKit-Easing.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9CFF8CD18149E2B00707D5B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D9CFF8D118149E2B00707D5B /* SpriteKit-Easing-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpriteKit-Easing-Prefix.pch"; sourceTree = "<group>"; };
-		D9CFF8D218149E2B00707D5B /* SpriteKit_Easing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpriteKit_Easing.h; sourceTree = "<group>"; };
-		D9CFF8D418149E2B00707D5B /* SpriteKit_Easing.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpriteKit_Easing.m; sourceTree = "<group>"; };
+		D9CFF8D218149E2B00707D5B /* SKEase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKEase.h; sourceTree = "<group>"; };
+		D9CFF8D418149E2B00707D5B /* SKEase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKEase.m; sourceTree = "<group>"; };
 		D9CFF8DA18149E2C00707D5B /* SpriteKit-EasingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SpriteKit-EasingTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9CFF8DB18149E2C00707D5B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		D9CFF8DE18149E2C00707D5B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -121,8 +121,8 @@
 				D9CFF8FB1814A88600707D5B /* EasingDeclarations.h */,
 				D9CFF8F81814A5AC00707D5B /* easing.c */,
 				D9CFF8F91814A5AC00707D5B /* easing.h */,
-				D9CFF8D218149E2B00707D5B /* SpriteKit_Easing.h */,
-				D9CFF8D418149E2B00707D5B /* SpriteKit_Easing.m */,
+				D9CFF8D218149E2B00707D5B /* SKEase.h */,
+				D9CFF8D418149E2B00707D5B /* SKEase.m */,
 				D9CFF8D018149E2B00707D5B /* Supporting Files */,
 			);
 			path = "SpriteKit-Easing";
@@ -236,7 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9CFF8FA1814A5AC00707D5B /* easing.c in Sources */,
-				D9CFF8D518149E2B00707D5B /* SpriteKit_Easing.m in Sources */,
+				D9CFF8D518149E2B00707D5B /* SKEase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

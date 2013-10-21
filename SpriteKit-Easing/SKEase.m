@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Birdcage Games LLC. All rights reserved.
 //
 
-#import "SpriteKit_Easing.h"
+#import "SKEase.h"
 
-@implementation SpriteKit_Easing
+@implementation SKEase
 
 +(AHEasingFunction) GetEaseFunction:(CurveType) curve Mode:(EasingMode) mode{
     AHEasingFunction currentFunction;
@@ -70,18 +70,46 @@
 }
 
 +(SKAction*) MoveToWithNode:(SKNode*)target EaseFucntion:(CurveType)curve Mode:(EasingMode)mode Time:(NSTimeInterval)time ToVector:(CGVector)to{
-    AHEasingFunction easingFunction = [SpriteKit_Easing GetEaseFunction:curve Mode:mode];
+    AHEasingFunction easingFunction = [SKEase GetEaseFunction:curve Mode:mode];
     CGPoint startPosition = target.position;
     
     SKAction *action = [self CreatePointTween:CGVectorMake(startPosition.x, startPosition.y) EndPosition:to time:time easingFunction:easingFunction setterBlock:^(SKNode* node, CGPoint point){[node setPosition:point];}];
     return action;
 }
 
-+(SKAction*) MoveFromWithNode:(SKNode*)target EaseFucntion:(CurveType)curve Mode:(EasingMode)mode Time:(NSTimeInterval)time ToVector:(CGVector)from{
-    AHEasingFunction easingFunction = [SpriteKit_Easing GetEaseFunction:curve Mode:mode];
++(SKAction*) MoveFromWithNode:(SKNode*)target EaseFucntion:(CurveType)curve Mode:(EasingMode)mode Time:(NSTimeInterval)time FromVector:(CGVector)from{
+    AHEasingFunction easingFunction = [SKEase GetEaseFunction:curve Mode:mode];
     CGPoint startPosition = target.position;
     
     SKAction *action = [self CreatePointTween:from EndPosition:CGVectorMake(startPosition.x, startPosition.y) time:time easingFunction:easingFunction setterBlock:^(SKNode* node, CGPoint point){[node setPosition:point];}];
+    return action;
+}
+
++(SKAction*) ScaleToWithNode:(SKNode*)target EaseFucntion:(CurveType)curve Mode:(EasingMode)mode Time:(NSTimeInterval)time ToVector:(CGFloat)to{
+    AHEasingFunction easingFunction = [SKEase GetEaseFunction:curve Mode:mode];
+    
+    SKAction *action = [self CreateFloatTween:target.xScale EndPosition:to time:time easingFunction:easingFunction setterBlock:^(SKNode* node, CGFloat scale){[node setScale:scale];}];
+    return action;
+}
+
++(SKAction*) ScaleFromWithNode:(SKNode*)target EaseFucntion:(CurveType)curve Mode:(EasingMode)mode Time:(NSTimeInterval)time FromVector:(CGFloat)from{
+    AHEasingFunction easingFunction = [SKEase GetEaseFunction:curve Mode:mode];
+    
+    SKAction *action = [self CreateFloatTween:from EndPosition:target.xScale time:time easingFunction:easingFunction setterBlock:^(SKNode* node, CGFloat scale){[node setScale:scale];}];
+    return action;
+}
+
++(SKAction*) RotateToWithNode:(SKNode*)target EaseFucntion:(CurveType)curve Mode:(EasingMode)mode Time:(NSTimeInterval)time ToVector:(CGFloat)to{
+    AHEasingFunction easingFunction = [SKEase GetEaseFunction:curve Mode:mode];
+    
+    SKAction *action = [self CreateFloatTween:target.zRotation EndPosition:to time:time easingFunction:easingFunction setterBlock:^(SKNode* node, CGFloat rotation){[node setZRotation:rotation];}];
+    return action;
+}
+
++(SKAction*) RotateFromWithNode:(SKNode*)target EaseFucntion:(CurveType)curve Mode:(EasingMode)mode Time:(NSTimeInterval)time FromVector:(CGFloat)from{
+    AHEasingFunction easingFunction = [SKEase GetEaseFunction:curve Mode:mode];
+    
+    SKAction *action = [self CreateFloatTween:from EndPosition:target.zRotation time:time easingFunction:easingFunction setterBlock:^(SKNode* node, CGFloat rotation){[node setZRotation:rotation];}];
     return action;
 }
 
