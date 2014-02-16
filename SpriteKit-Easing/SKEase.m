@@ -69,7 +69,7 @@
     return action;
 }
 
-+(SKAction*) MoveToWithNode:(SKNode*)target EaseFucntion:(CurveType)curve Mode:(EasingMode)mode Time:(NSTimeInterval)time ToVector:(CGVector)to{
++(SKAction*) MoveToWithNode:(SKNode*)target EaseFunction:(CurveType)curve Mode:(EasingMode)mode Time:(NSTimeInterval)time ToVector:(CGVector)to{
     AHEasingFunction easingFunction = [SKEase GetEaseFunction:curve Mode:mode];
     CGPoint startPosition = target.position;
     
@@ -77,7 +77,7 @@
     return action;
 }
 
-+(SKAction*) MoveFromWithNode:(SKNode*)target EaseFucntion:(CurveType)curve Mode:(EasingMode)mode Time:(NSTimeInterval)time FromVector:(CGVector)from{
++(SKAction*) MoveFromWithNode:(SKNode*)target EaseFunction:(CurveType)curve Mode:(EasingMode)mode Time:(NSTimeInterval)time FromVector:(CGVector)from{
     AHEasingFunction easingFunction = [SKEase GetEaseFunction:curve Mode:mode];
     CGPoint startPosition = target.position;
     
@@ -85,28 +85,28 @@
     return action;
 }
 
-+(SKAction*) ScaleToWithNode:(SKNode*)target EaseFucntion:(CurveType)curve Mode:(EasingMode)mode Time:(NSTimeInterval)time ToVector:(CGFloat)to{
++(SKAction*) ScaleToWithNode:(SKNode*)target EaseFunction:(CurveType)curve Mode:(EasingMode)mode Time:(NSTimeInterval)time ToVector:(CGFloat)to{
     AHEasingFunction easingFunction = [SKEase GetEaseFunction:curve Mode:mode];
     
     SKAction *action = [self CreateFloatTween:target.xScale EndPosition:to time:time easingFunction:easingFunction setterBlock:^(SKNode* node, CGFloat scale){[node setScale:scale];}];
     return action;
 }
 
-+(SKAction*) ScaleFromWithNode:(SKNode*)target EaseFucntion:(CurveType)curve Mode:(EasingMode)mode Time:(NSTimeInterval)time FromVector:(CGFloat)from{
++(SKAction*) ScaleFromWithNode:(SKNode*)target EaseFunction:(CurveType)curve Mode:(EasingMode)mode Time:(NSTimeInterval)time FromVector:(CGFloat)from{
     AHEasingFunction easingFunction = [SKEase GetEaseFunction:curve Mode:mode];
     
     SKAction *action = [self CreateFloatTween:from EndPosition:target.xScale time:time easingFunction:easingFunction setterBlock:^(SKNode* node, CGFloat scale){[node setScale:scale];}];
     return action;
 }
 
-+(SKAction*) RotateToWithNode:(SKNode*)target EaseFucntion:(CurveType)curve Mode:(EasingMode)mode Time:(NSTimeInterval)time ToVector:(CGFloat)to{
++(SKAction*) RotateToWithNode:(SKNode*)target EaseFunction:(CurveType)curve Mode:(EasingMode)mode Time:(NSTimeInterval)time ToVector:(CGFloat)to{
     AHEasingFunction easingFunction = [SKEase GetEaseFunction:curve Mode:mode];
     
     SKAction *action = [self CreateFloatTween:target.zRotation EndPosition:to time:time easingFunction:easingFunction setterBlock:^(SKNode* node, CGFloat rotation){[node setZRotation:rotation];}];
     return action;
 }
 
-+(SKAction*) RotateFromWithNode:(SKNode*)target EaseFucntion:(CurveType)curve Mode:(EasingMode)mode Time:(NSTimeInterval)time FromVector:(CGFloat)from{
++(SKAction*) RotateFromWithNode:(SKNode*)target EaseFunction:(CurveType)curve Mode:(EasingMode)mode Time:(NSTimeInterval)time FromVector:(CGFloat)from{
     AHEasingFunction easingFunction = [SKEase GetEaseFunction:curve Mode:mode];
     
     SKAction *action = [self CreateFloatTween:from EndPosition:target.zRotation time:time easingFunction:easingFunction setterBlock:^(SKNode* node, CGFloat rotation){[node setZRotation:rotation];}];
