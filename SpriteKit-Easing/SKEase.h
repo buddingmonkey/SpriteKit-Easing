@@ -18,15 +18,15 @@
 +(SKAction *)CreateFloatTween:(CGFloat)start EndPosition:(CGFloat)end time:(NSTimeInterval)time easingFunction:(AHEasingFunction)easingFunction setterBlock:(void (^)(SKNode*, CGFloat))setter;
 
 // Movement
-+(SKAction*) MoveToWithNode:(SKNode*)node EaseFucntion:(CurveType)curve Mode:(EasingMode)mode Time:(NSTimeInterval)time ToVector:(CGVector)to;
-+(SKAction*) MoveFromWithNode:(SKNode*)target EaseFucntion:(CurveType)curve Mode:(EasingMode)mode Time:(NSTimeInterval)time FromVector:(CGVector)from;
++(SKAction*) MoveToWithNode:(SKNode*)node EaseFunction:(CurveType)curve Mode:(EasingMode)mode Time:(NSTimeInterval)time ToVector:(CGVector)to;
++(SKAction*) MoveFromWithNode:(SKNode*)target EaseFunction:(CurveType)curve Mode:(EasingMode)mode Time:(NSTimeInterval)time FromVector:(CGVector)from;
 
 // Rotation
-+(SKAction*) RotateToWithNode:(SKNode*)target EaseFucntion:(CurveType)curve Mode:(EasingMode)mode Time:(NSTimeInterval)time ToVector:(CGFloat)to;
-+(SKAction*) RotateFromWithNode:(SKNode*)target EaseFucntion:(CurveType)curve Mode:(EasingMode)mode Time:(NSTimeInterval)time FromVector:(CGFloat)from;
++(SKAction*) RotateToWithNode:(SKNode*)target EaseFunction:(CurveType)curve Mode:(EasingMode)mode Time:(NSTimeInterval)time ToVector:(CGFloat)to;
++(SKAction*) RotateFromWithNode:(SKNode*)target EaseFunction:(CurveType)curve Mode:(EasingMode)mode Time:(NSTimeInterval)time FromVector:(CGFloat)from;
 
 // Scale
-+(SKAction*) ScaleToWithNode:(SKNode*)target EaseFucntion:(CurveType)curve Mode:(EasingMode)mode Time:(NSTimeInterval)time ToVector:(CGFloat)to;
-+(SKAction*) ScaleFromWithNode:(SKNode*)target EaseFucntion:(CurveType)curve Mode:(EasingMode)mode Time:(NSTimeInterval)time FromVector:(CGFloat)from;
++(SKAction*) ScaleToWithNode:(SKNode*)target EaseFunction:(CurveType)curve Mode:(EasingMode)mode Time:(NSTimeInterval)time ToVector:(CGFloat)to;
++(SKAction*) ScaleFromWithNode:(SKNode*)target EaseFunction:(CurveType)curve Mode:(EasingMode)mode Time:(NSTimeInterval)time FromVector:(CGFloat)from;
 
 @end
