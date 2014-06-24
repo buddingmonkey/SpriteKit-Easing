@@ -116,14 +116,14 @@
 +(SKAction*) FadeToWithNode:(SKNode*)target EaseFunction:(CurveType)curve Mode:(EasingMode)mode Time:(NSTimeInterval)time ToValue:(CGFloat)to{
     AHEasingFunction easingFunction = [SKEase GetEaseFunction:curve Mode:mode];
     
-    SKAction *action = [self CreateFloatTween:target.zRotation EndPosition:to time:time easingFunction:easingFunction setterBlock:^(SKNode* node, CGFloat alpha){[node setAlpha:rotation];}];
+    SKAction *action = [self CreateFloatTween:target.alpha EndPosition:to time:time easingFunction:easingFunction setterBlock:^(SKNode* node, CGFloat alpha){node.alpha = alpha;}];
     return action;
 }
 
 +(SKAction*) FadeFromWithNode:(SKNode*)target EaseFunction:(CurveType)curve Mode:(EasingMode)mode Time:(NSTimeInterval)time FromValue:(CGFloat)from{
     AHEasingFunction easingFunction = [SKEase GetEaseFunction:curve Mode:mode];
     
-    SKAction *action = [self CreateFloatTween:from EndPosition:target.zRotation time:time easingFunction:easingFunction setterBlock:^(SKNode* node, CGFloat alpha){[node setAlpha:alpha];}];
+    SKAction *action = [self CreateFloatTween:from EndPosition:target.zRotation time:time easingFunction:easingFunction setterBlock:^(SKNode* node, CGFloat alpha){node.alpha = alpha;}];
     return action;
 }
 
