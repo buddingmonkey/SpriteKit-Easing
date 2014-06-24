@@ -22,11 +22,15 @@
 +(SKAction*) MoveFromWithNode:(SKNode*)target EaseFunction:(CurveType)curve Mode:(EasingMode)mode Time:(NSTimeInterval)time FromVector:(CGVector)from;
 
 // Rotation
-+(SKAction*) RotateToWithNode:(SKNode*)target EaseFunction:(CurveType)curve Mode:(EasingMode)mode Time:(NSTimeInterval)time ToVector:(CGFloat)to;
-+(SKAction*) RotateFromWithNode:(SKNode*)target EaseFunction:(CurveType)curve Mode:(EasingMode)mode Time:(NSTimeInterval)time FromVector:(CGFloat)from;
++(SKAction*) RotateToWithNode:(SKNode*)target EaseFunction:(CurveType)curve Mode:(EasingMode)mode Time:(NSTimeInterval)time ToValue:(CGFloat)to;
++(SKAction*) RotateFromWithNode:(SKNode*)target EaseFunction:(CurveType)curve Mode:(EasingMode)mode Time:(NSTimeInterval)time FromValue:(CGFloat)from;
 
 // Scale
-+(SKAction*) ScaleToWithNode:(SKNode*)target EaseFunction:(CurveType)curve Mode:(EasingMode)mode Time:(NSTimeInterval)time ToVector:(CGFloat)to;
-+(SKAction*) ScaleFromWithNode:(SKNode*)target EaseFunction:(CurveType)curve Mode:(EasingMode)mode Time:(NSTimeInterval)time FromVector:(CGFloat)from;
++(SKAction*) ScaleToWithNode:(SKNode*)target EaseFunction:(CurveType)curve Mode:(EasingMode)mode Time:(NSTimeInterval)time ToValue:(CGFloat)to;
++(SKAction*) ScaleFromWithNode:(SKNode*)target EaseFunction:(CurveType)curve Mode:(EasingMode)mode Time:(NSTimeInterval)time FromValue:(CGFloat)from;
+
+// Fade
++(SKAction*) FadeToWithNode:(SKNode*)target EaseFunction:(CurveType)curve Mode:(EasingMode)mode Time:(NSTimeInterval)time ToValue:(CGFloat)to;
++(SKAction*) FadeFromWithNode:(SKNode*)target EaseFunction:(CurveType)curve Mode:(EasingMode)mode Time:(NSTimeInterval)time FromValue:(CGFloat)from;
 
 @end
