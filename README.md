@@ -1,5 +1,4 @@
 #SpriteKit-Easing
-####This library is still under construction and contains untested code.
 
 ###Better Easing for SpriteKit!
 
@@ -37,8 +36,8 @@ SKAction* action = [SKEase MoveToWithNode:node EaseFunction:CurveTypeSine Mode:E
 
 [node runAction:action]
 
-// The rest of the library follows this sintax with the exception of the Float and Point
-// Those add a setter that can be used to update a variable as the action updates
+// The rest of the library follows this syntax with the exception of the Float and Point
+// Those add a setter that can be used to update a variable of your choice as the action updates
 ```
 
 ####More to come... stay tuned...
