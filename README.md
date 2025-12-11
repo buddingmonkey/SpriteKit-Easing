@@ -1,3 +1,4 @@
+# This library is now archived. There are tons of great easing frameworks I higly reccomend [Sprite Kit Easing Swift](https://github.com/craiggrummitt/SpriteKitEasingSwift)
 # SpriteKit-Easing
 
 ### Better Easing for SpriteKit!
